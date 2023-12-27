@@ -1,0 +1,72 @@
+{% extends 'reserva/base.html' %}
+{% load static %}
+{% block content %}
+<div style="text-align:center;">
+    <h1>Pedidos de reserva</h1>
+</div>
+<div class="d-grid gap-2 d-md-flex justify-content-md-end" style="text-align: right;">
+    <button type="button" class="btn btn-success" style="width:200px;margin-bottom:10px;" onclick="location.href='{% url 'reservaMes' 'Carro' %}'">Reservas Totais</button>
+</div>
+{% if db_none %}
+<div class="row">
+{% for item in db_none %}
+    <div class="col-sm-4">
+        <div class="card w-100 cartao" style="margin-bottom:10%;">
+            <div class="card-body">
+                <h5 class="card-title">Pedido N°#{{item.id}}</h5>
+                <form action="" method="post">
+                {% csrf_token %}
+                    <p class="card-text" >Carro: {{item.carro}}</p>
+                    <p class="card-text">Solicitante: {{item.solicitante}}</p>
+                    <p class="card-text">Dia: {{item.data}}</p>
+                    <p class="card-text">Dás: {{item.hora}}</p>
+                    <p class="card-text">Motivo: {{item.motivo}}</p>
+                    <input type="text" style="display:none" value="{{item.id}}" name="id">
+                    <button type="submit" class="btn btn-success" value="aprovar" name="botao">Aprovar</button>
+                    <button class="btn btn-danger" value="reprovar" name="botao" id="botaor">Reprovar</button><br>
+                    <input type="text" style="display:none;margin-top:5px;" name="repro" id="repro" placeholder="Digite o parecer:">
+                    <input type="submit" style="display:none" class=" btn btn-success" id="submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
+{% else %}
+<div style="text-align:center;">
+    <h3>Sem pedidos para Aprovar</h3>
+</div>
+{% endif %}
+{% if db_true %}
+    <div style="text-align:center;">
+        <h1>Aprovados</h1>
+    </div>
+<div class="row">
+    {% for item in db_true %}
+        <div class="col-sm-4">
+        <div class="card w-100 cartao" style="margin-bottom:10%;">
+            <div class="card-body">
+                <h5 class="card-title">Pedido N°#{{item.id}}</h5>
+                <form action="" method="post">
+                {% csrf_token %}
+                    <p class="card-text" >Carro: {{item.carro}}</p>
+                    <p class="card-text">Solicitante: {{item.solicitante}}</p>
+                    <p class="card-text">Dia: {{item.data}}</p>
+                    <p class="card-text">Dás: {{item.hora}}</p>
+                    <p class="card-text">Motivo: {{item.motivo}}</p>
+                    <input type="text" style="display:none" value="{{item.id}}" name="id">
+                    <button type="submit" class="btn btn-danger" value="cancelar" name="botao">Cancelar</button>
+                    <input type="text" style="display:none;margin-top:5px;" name="repro" id="reproCancelado" placeholder="Digite o parecer:">
+                    <input type="submit" style="display:none" class=" btn btn-success" id="submitCancelado" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
+{% else %}
+<div style="text-align:center;">
+    <h3>Sem reservas para os próximos dias</h3>
+</div>
+{% endif %}
+{% endblock %}
