@@ -1,0 +1,250 @@
+@media only screen and (max-width:1766px){
+.update{
+    margin-top: 200px;
+}
+#id_nome{
+    width:100%;
+    margin-bottom:5%;
+}
+#id_email{
+    width:100%;
+    margin-bottom:5%;
+}
+#id_salas{
+    margin-bottom:5%;
+}
+.formsala{
+    padding-top:5%;
+}
+
+
+#id_carro{
+    margin-bottom:5%;
+}
+
+.card:hover{
+    transform:scale(1.1);
+    box-shadow: 5px 6px 6px 2px #e9ecef;
+}
+#divRepetir{
+    display:none;
+}
+
+.datepicker .datepicker-inline{
+    background-color:white;
+    border:solid 1px gray;
+    width: 470px;
+}
+.datepicker-inline table tr td{
+    background:#5cb85c;
+}
+.datepicker-inline table tr td,
+.datepicker-inline table tr th{
+    text-align: center;
+    padding: 8px 12px;
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+    border-radius:10px;
+}
+.datepicker-inline table tr td.highlighted{
+    border-radius:10px!important;
+    background-color:#F24C46!important;
+    &:hover{
+        background-color:#CF323C!important;
+    }
+}
+.datepicker-dropdown table tr td{
+    background:#5cb85c;
+}
+.datepicker-dropdown{
+    top:300px!important;
+    left:100px!important;
+}
+.datepicker-dropdown table tr td,
+.datepicker-dropdown table tr th{
+    text-align: center!important;
+    padding: 0px 0px!important;
+    width: 50px!important;
+    height: 40px!important;
+    font-size: 14px!important;
+    border-radius:10px!important;
+}
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+  border-radius:10px;
+}
+.dropdown-content a {
+  background-color:white;
+  display: block;
+  color: #000000;
+  padding: 5px;
+  text-decoration: none;
+  border-radius:10px;
+}
+.dropdown-content a:hover {
+  color: #FFFFFF;
+  background-color: #0a53be;
+}
+.reservas__picker{
+    border:solid 1px;
+    background-color:#EDEDED;
+    border-radius:20px;
+}
+.btn__reserva{
+    width:150px;
+}
+.carro__picker{
+    border:solid 1px;
+    background-color:#EDEDED;
+    border-radius:20px;
+    margin-left:25%;
+    margin-right:25%;
+}
+.login__picker{
+    border:solid 1px;
+    background-color:#EDEDED;
+    border-radius:20px;
+    margin-left:35%;
+    margin-right:35%;
+}
+.btn__reserva{
+    font-size:20px!important;
+    width:150px;
+}
+#btnLogin{
+    margin-top:10px;
+    width:210px;
+}
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width:1767px){
+.update{
+    margin-top:200px;
+}
+.formsala{
+    padding-top:10%;
+}
+.btnIndex{
+    padding:10px;
+    font-size:20px;
+}
+.btnLogin{
+    font-size:20px;
+}
+#divRepetir{
+    visibility:hidden;
+}
+.datepicker .datepicker-inline{
+    background-color:white;
+    border:solid 1px gray;
+    width: 470px;
+}
+.datepicker-inline table tr td{
+    background:#5cb85c;
+}
+.datepicker-inline table tr td,
+.datepicker-inline table tr th{
+    text-align: center;
+    padding: 16px 24px;
+    width: 200px;
+    height: 40px;
+    font-size: 14px;
+    border-radius:10px;
+}
+.datepicker-inline table tr td.highlighted{
+    border-radius:10px!important;
+    background-color:#F24C46!important;
+    &:hover{
+        background-color:#CF323C!important;
+    }
+}
+.datepicker-dropdown table tr td{
+    background:#5cb85c;
+}
+.datepicker-dropdown{
+    top:300px!important;
+    left:330px!important;
+}
+.datepicker-dropdown table tr td,
+.datepicker-dropdown table tr th{
+    text-align: center!important;
+    padding: 0px 0px!important;
+    width: 50px!important;
+    height: 40px!important;
+    font-size: 14px!important;
+    border-radius:10px!important;
+}
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+  border-radius:10px;
+}
+.dropdown-content a {
+  background-color:white;
+  display: block;
+  color: #000000;
+  padding: 5px;
+  text-decoration: none;
+  border-radius:10px;
+}
+.dropdown-content a:hover {
+  color: #FFFFFF;
+  background-color: #0a53be;
+}
+.reservas__picker{
+    border:solid 1px;
+    background-color:#EDEDED;
+    border-radius:20px;
+}
+.carro__picker{
+    border:solid 1px;
+    background-color:#EDEDED;
+    border-radius:20px;
+    margin-left:30%;
+    margin-right:30%;
+}
+.login__picker{
+    border:solid 1px;
+    background-color:#EDEDED;
+    border-radius:20px;
+    margin-left:40%;
+    margin-right:40%;
+}
+.btn__reserva{
+    font-size:20px!important;
+    width:150px;
+}
+#btnLogin{
+    margin-top:10px;
+    width:240px;
+}
+}
